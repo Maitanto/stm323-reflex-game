@@ -81,7 +81,7 @@ void clock_init(void) {
 
 void clock_init2(void) {
     // improved version with overdrive
-    rcc_clock_setup_pll_x(&rcc_hsi_configs[RCC_CLOCK_3V3_168MHZ], 1);
+    rcc_clock_setup_pll(&rcc_hsi_configs[RCC_CLOCK_3V3_168MHZ]);
     // It is not possible to have 180MHz clock and use the USB at the same time
     // as you cant get 48MHz required by the USB peripheral.
     // rcc_clock_setup_pll(&rcc_hsi_configs[RCC_CLOCK_3V3_180MHZ]);
